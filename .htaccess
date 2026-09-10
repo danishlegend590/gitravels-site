@@ -1,0 +1,12 @@
+# Prevent directory listing
+Options -Indexes
+
+# Force HTTPS (uncomment once SSL is installed on the server)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Hide dotfiles
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
